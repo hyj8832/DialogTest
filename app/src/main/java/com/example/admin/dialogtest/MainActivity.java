@@ -26,15 +26,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog.setTitle("First Dialog");
         dialog.setIcon(R.mipmap.ic_launcher);
       //  dialog.setMessage("It is the place to write the message.");
-        dialog.setItems(itemArr, new DialogInterface.OnClickListener() {
+/*        dialog.setItems(itemArr, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+//i가 박지민 김석진 얘네 받음.
+                butDialog.setText(itemArr[i]);
+
+            }
+        });*/
+
+        //라디오 버튼 목록
+        dialog.setSingleChoiceItems(itemArr,0,new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 butDialog.setText(itemArr[i]);
 
             }
         });
-        dialog.setPositiveButton("OK",null);
+        // dialog.setPositiveButton("OK",null);
         dialog.show();
 
     }
 }
+
+
+
+
+
+
+
+
